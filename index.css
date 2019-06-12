@@ -25,6 +25,7 @@ article {
 footer {
   margin: 0px;
   padding: 0px;
+  min-height: 70px;
 }
 
 h1 {
