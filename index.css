@@ -52,3 +52,7 @@ p {
 .section-free {
   min-height: 20vh;
 }
+
+.index-image {
+  backround-image: url(); 
+}
