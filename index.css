@@ -54,5 +54,5 @@ p {
 }
 
 .index-image {
-  backround-image: url(books.jpg); 
+  backround-image: url(/books.jpg); 
 }
