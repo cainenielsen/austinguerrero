@@ -1,5 +1,6 @@
 html {
-
+  width: 100vw;
+  min-height: 100vh;
 }
 
 body {
@@ -7,15 +8,23 @@ body {
 }
 
 header {
-
+  margin: 0px;
+  padding: 0px;
 }
 
 main {
+  margin: 0px;
+  padding: 0px;
+}
 
+article {
+  margin: 0px;
+  padding: 0px;   
 }
 
 footer {
-
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
@@ -32,11 +41,10 @@ p {
 
 .vert-nav {
   width: 20vw;
-  height: 100%;
+  height: 100vh;
 }
 
 .hori-nav {
-  display: block;
   width: 100%;
   height: 70px;
 }
