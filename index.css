@@ -54,5 +54,8 @@ p {
 }
 
 .index-image {
-  background-image: url(/books.jpg); 
+  background-image: url(/books.jpg);
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  background-position: center;
 }
