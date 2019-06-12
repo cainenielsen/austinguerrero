@@ -1,0 +1,54 @@
+html {
+
+}
+
+body {
+
+}
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
+}
+
+.vert-nav {
+  width: 20vw;
+  height: 100%;
+}
+
+.hori-nav {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+.section { 
+  width: 100%;
+}
+
+.section-full {
+  height: 100vh;
+}
+
+.section-free {
+  min-height: 20vh;
+}
