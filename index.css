@@ -1,31 +1,40 @@
 html {
-  width: 100vw;
   min-height: 100vh;
 }
 
 body {
-
+  background-color: lightgrey;
+  overflow-x: hidden;
 }
 
 header {
   margin: 0px;
-  padding: 0px;
 }
 
 main {
   margin: 0px;
-  padding: 0px;
+  margin-top: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 article {
   margin: 0px;
-  padding: 0px;   
+  margin-bottom: 5vh;
+  padding: 5vw;
+  background-color: tan;
+  overflow: hidden;
 }
 
 footer {
   margin: 0px;
   padding: 0px;
   min-height: 70px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: white;
+  line-height: 70px;
+  overflow: hidden;
 }
 
 h1 {
@@ -48,7 +57,25 @@ p {
 .hori-nav {
   width: 100%;
   height: 70px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 0px;
+  padding: 0px;
+  padding-left: 5vw;
+  overflow: hidden;
+  background-color: white;
+  line-height: 70px;
+}
+
+.hori-nav > * {
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-item {
+  height: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  line-height: 50px;
+  font-size: 3vh;
 }
 
 .section { 
@@ -66,6 +93,7 @@ p {
 .index-image {
   background-image: url(/books.jpg);
   background-repeat: no-repeat;
-  background-attachment: cover;
+  background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 }
