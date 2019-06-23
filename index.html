@@ -1,38 +1,91 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Home | Austin Guerrero</title>
-  </head>
-  <body>
-      <header>
-        <div class="hori-nav">
-          <div class="nav-item"><a href="/">Austin Guerrero</a></div>
-        </div>
-        <div class="section section-full index-image"></div>
-      </header>
-      <main>
-        
-        <div class="section section-free">
-          <article>
-            <h2>I'm on Facebook</h2>
-            <p>See my profile <a href="https://www.facebook.com/austin.guerrero.792">here</a>.</p>
-          </article>
-          <article>
-            <h2>Anne Rice</h2>
-            <p>See more from Anne Rice <a href="http://annerice.com/">here</a>.</p>
-          </article>
-          <article>
-            <h2>Brandon Sanderson</h2>
-            <p>See more from Brandon Sanderson <a href="https://brandonsanderson.com/">here</a>.</p>
-          </article>
-        </div>
-      </main>
-      <footer>
-        <a href="https://www.facebook.com/austin.guerrero.792">Find Me On Facebook</a>
-        <a href="/changelog.html">Change Log</a>
-      </footer>
-  </body>
+  <title>Home | Austin Guerrero</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/dark-library.jpeg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Austin Guerrero</p>
+    <p class="w3-xlarge" style="text-align:center;">Writer, Director, Life Seaker</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge"><b>Newest addition:</b> <a href="/the-bookseller.pdf">The book seller</a></p>
+    <p class="w3-large">Find me in Utah, USA</p>
+    <p><a href="https://www.facebook.com/austin.guerrero.792" target="_blank">Facebook</a> | <a href="/blog" target="_blank">Blog</a> | <a href="mailto:beyondtheseaside007@gmail.com" target="_blank">beyondtheseaside007@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Projects</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Litterary</h5>
+      <h5>Film</h5>
+      <h5>Crafts</h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Ask me about...</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Classic Films</h5>
+      <h5>Technology</h5>
+      <h5>Great books</h5>
+      <h5>Utah, USA</h5>
+      <h5>Go Health</h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>My favorite writers</h1>
+    </div>
+    <div class="w3-container">
+      <h5><a href="https://brandonsanderson.com/">Brandon Sanderson</a></h5>
+      <h5><a href="http://annerice.com/">Anne Rice</a></h5>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact Me</h1>
+    </div>
+    <div class="w3-container">
+      <p>I'm open to opportunities, events, job offerings, and more...</p>
+      <form action="https://hooks.zapier.com/hooks/catch/2869760/oy1qncs/" method="get">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Full Name" required name="Full Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Organization" required name="Organization"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email Address" required name="Email Address"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
+
