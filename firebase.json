@@ -5,7 +5,20 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "redirects": [ {
+      "source": "/foo",
+      "destination": "/bar",
+      "type": 301
+    }, {
+      "source": "/firebase/**",
+      "destination": "https://firebase.google.com/",
+      "type": 302
+    } ],
+    "rewrites": [ {
+      "source": "/file-download",
+      "destination": "/file-download.html"
+    } ]
   },
   "functions": {
     "predeploy": [

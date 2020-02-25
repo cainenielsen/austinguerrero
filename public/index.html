@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script defer src="/scripts/index.js"></script>
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
     <style>
       body,h1,h5 {font-family: "Raleway", sans-serif}
       body, html {height: 100%}
@@ -37,7 +39,7 @@
     <!-- Main Title -->
     <div class="w3-display-middle w3-jumbo">
       <p>Austin Guerrero</p>
-      <p class="w3-xlarge" style="text-align:center;">Writer, Director, Life Seaker</p>
+      <p class="w3-xlarge" style="text-align:center;">Writer, Director, Life Seeker</p>
     </div>
 
     <!-- Navigation buttons -->
@@ -48,7 +50,9 @@
 
     <!-- Intro Footer -->
     <div class="w3-display-bottomleft w3-container">
-      <p class="w3-xlarge"><b>Newest addition:</b> <a href="/resources/the-bookseller.pdf">The book seller</a></p>
+      <p class="w3-xlarge">
+        <b>Newest addition:</b> <a onclick="document.getElementById('storeModel').style.display='block'" href="#">The bookseller</a>
+      </p>
     </div>
   </div>
 
@@ -234,6 +238,54 @@
       </div>
     </div>
   </div>
+
+  <!-- Store Model -->
+  <div id="storeModel" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="closeStoreModel();" class="w3-button w3-display-topright w3-large">x</span>
+        <h1>The Bookseller</h1>
+      </div>
+      <div class="w3-container" style="text-align:center;">
+      <p>Follow Gabriel Barret in his struggle to find let alone meet his hero and navigate a bustling world full of trials.</p>
+      <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+      <button id="checkout-button-sku_Gjy7mALtsNJoHr" role="link" class="w3-button w3-black">Support me and Download</button>
+      <div id="error-message"></div>
+      <br>
+      </div>
+    </div>
+  </div>
+
+    <script>
+    (function() {
+      var stripe = Stripe('pk_live_HEZ3VQl2HYQEvNcvckGuNebb00u9YWwmXO');
+
+      var checkoutButton = document.getElementById('checkout-button-sku_Gjy7mALtsNJoHr');
+      checkoutButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+          items: [{sku: 'sku_Gjy7mALtsNJoHr', quantity: 1}],
+
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: window.location.protocol + '//austinguerrero.com/file-download',
+          cancelUrl: window.location.protocol + '//austinguerrero.com/',
+        })
+        .then(function (result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+      });
+    })();
+    </script>
 
   </body>
 </html>
